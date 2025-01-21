@@ -37,6 +37,8 @@ $template = array(
 $table->setTemplate($template);
 
 echo $table->generate();
+
+echo $pager->links();
 ?>
 
 

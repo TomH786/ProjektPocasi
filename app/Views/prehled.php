@@ -14,10 +14,10 @@
                 <div class="card-body text-white">
                     <?php
                     echo "<h3>", anchor("data/" . $row->S_ID, $row->place), "</h3>";
-                    echo "<p><b>Zeměpisná šířka:</b> " . $row->geo_latitude . " °</p>";
                     ?>
                     <img class="img-fluid" style="width: 40%;" src="<?= base_url("obrazky/vlajky/" . $row->vlajka) ?>" alt="...">
                     <?php
+                    echo "<p><b>Zeměpisná šířka:</b> " . $row->geo_latitude . " °</p>";
                     echo "<p><b>Zeměpisná délka:</b>" . $row->geo_longtitude . " °</p>";
                     echo "<p><b>Nadmořská výška:</b> " . $row->height . " m n. m.</p>";
 

@@ -40,10 +40,15 @@ class Main extends BaseController
     public function data($id)
     {
         $zeme = $this->station->find($id);
-        $mereni = $this->data->where("Stations_ID", $id)->findAll();
+        $mereni = $this->data->where("Stations_ID", $id)->paginate(25);
+        $pager = $this->data->pager;
         $data["zeme"] = $zeme;
+        $data["pager"] = $pager;
         $data["udaje"] = $mereni;
         echo view("data", $data);
+
+        
+
     }
 
     public function obrazky($id)
